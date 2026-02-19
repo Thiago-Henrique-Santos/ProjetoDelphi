@@ -103,7 +103,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="unitCentralClientes.pas">
-            <Form>r</Form>
+            <Form>formCentralClientes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

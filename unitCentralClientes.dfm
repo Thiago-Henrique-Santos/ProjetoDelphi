@@ -1,4 +1,4 @@
-object r: Tr
+object formCentralClientes: TformCentralClientes
   Left = 0
   Top = 0
   Caption = 'Central de Clientes - Projeto Delphi'

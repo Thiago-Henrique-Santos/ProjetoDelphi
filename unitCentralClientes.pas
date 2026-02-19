@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.Buttons;
 
 type
-  Tr = class(TForm)
+  TformCentralClientes = class(TForm)
     PnlCabecalho: TPanel;
     Image1: TImage;
     LblTitulo: TLabel;
@@ -23,13 +23,13 @@ type
   end;
 
 var
-  r: Tr;
+  formCentralClientes: TformCentralClientes;
 
 implementation
 
 {$R *.dfm}
 
-procedure Tr.FormResize(Sender: TObject);
+procedure TformCentralClientes.FormResize(Sender: TObject);
 begin
   LblTitulo.Left := (PnlCabecalho.Width - LblTitulo.Width) div 2;
   LblTitulo.Top := (PnlCabecalho.Height - LblTitulo.Height) div 2;
