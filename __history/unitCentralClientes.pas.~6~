@@ -1,0 +1,35 @@
+unit unitCentralClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
+  Vcl.StdCtrls;
+
+type
+  TformCentralClientes = class(TForm)
+    PnlPageHeader: TPanel;
+    Image1: TImage;
+    LblPageTitle: TLabel;
+    procedure FormResize(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formCentralClientes: TformCentralClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformCentralClientes.FormResize(Sender: TObject);
+begin
+  LblPageTitle.Left = (PnlPageHeader.Width - LblPageTitle.Width) div 2;
+  LblPageTitle.Top = (PnlPageHeader.Height - LblPageTitle.Height) div 2;
+end;
+
+end.

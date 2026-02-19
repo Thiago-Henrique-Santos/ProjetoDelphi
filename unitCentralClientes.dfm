@@ -1,8 +1,8 @@
-object formCentralClientes: TformCentralClientes
+object r: Tr
   Left = 0
   Top = 0
   Caption = 'Central de Clientes - Projeto Delphi'
-  ClientHeight = 606
+  ClientHeight = 462
   ClientWidth = 876
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,16 +12,16 @@ object formCentralClientes: TformCentralClientes
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
+  object PnlCabecalho: TPanel
     Left = 0
     Top = 0
     Width = 876
     Height = 120
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 886
     object Image1: TImage
       Left = 8
       Top = 8
@@ -410,5 +410,45 @@ object formCentralClientes: TformCentralClientes
         63E31B40F6B1F10D20FBD8F806907D6C7C03C83E36FE1FCA766CAF9BB55E0500
         00000049454E44AE426082}
     end
+    object LblTitulo: TLabel
+      Left = 234
+      Top = 27
+      Width = 427
+      Height = 56
+      Caption = 'Central de clientes'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -48
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object PnlAcoes: TPanel
+    Left = 0
+    Top = 120
+    Width = 876
+    Height = 57
+    Align = alTop
+    TabOrder = 1
+    ExplicitTop = 114
+    object BitBtn1: TBitBtn
+      Left = 8
+      Top = 6
+      Width = 100
+      Height = 45
+      Caption = 'Novo Cliente'
+      TabOrder = 0
+    end
+  end
+  object LtbClientes: TListBox
+    Left = 0
+    Top = 177
+    Width = 876
+    Height = 285
+    Align = alClient
+    ItemHeight = 13
+    TabOrder = 2
+    ExplicitTop = 183
   end
 end
