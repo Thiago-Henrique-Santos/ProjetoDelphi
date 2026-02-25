@@ -476,6 +476,42 @@ object FormCadCliente: TFormCadCliente
       Font.Style = []
       ParentFont = False
     end
+    object Edit1: TEdit
+      Left = 30
+      Top = 8
+      Width = 59
+      Height = 21
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 172
+      Top = 8
+      Width = 596
+      Height = 21
+      TabOrder = 1
+    end
+    object CbxTipoCadastro: TComboBox
+      Left = 114
+      Top = 48
+      Width = 145
+      Height = 21
+      TabOrder = 2
+      Text = 'Pessoa f'#237'sica ou jur'#237'dica'
+      OnChange = CbxTipoCadastroChange
+      Items.Strings = (
+        'Pessoa f'#237'sica'
+        'Pessoa jur'#237'dica')
+    end
+    object TxmCPFCNPJ: TMaskEdit
+      Left = 353
+      Top = 48
+      Width = 414
+      Height = 21
+      ReadOnly = True
+      TabOrder = 3
+      Text = ''
+    end
     object BtnConfirmar: TBitBtn
       Left = 164
       Top = 104
@@ -581,7 +617,7 @@ object FormCadCliente: TFormCadCliente
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-      TabOrder = 0
+      TabOrder = 4
     end
     object BtnCancelar: TBitBtn
       Left = 321
@@ -688,7 +724,7 @@ object FormCadCliente: TFormCadCliente
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-      TabOrder = 1
+      TabOrder = 5
     end
     object BtnLimparCampos: TBitBtn
       Left = 480
@@ -795,44 +831,6 @@ object FormCadCliente: TFormCadCliente
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-      TabOrder = 2
-    end
-    object CbxTipoCadastro: TComboBox
-      Left = 114
-      Top = 48
-      Width = 145
-      Height = 21
-      TabOrder = 3
-      Text = 'Pessoa f'#237'sica ou jur'#237'dica'
-      OnChange = CbxTipoCadastroChange
-      Items.Strings = (
-        'Pessoa f'#237'sica'
-        'Pessoa jur'#237'dica')
-    end
-    object TxmCPFCNPJ: TMaskEdit
-      Left = 353
-      Top = 48
-      Width = 414
-      Height = 21
-      ReadOnly = True
-      TabOrder = 4
-      Text = ''
-    end
-    object TxtId: TEdit
-      Left = 30
-      Top = 8
-      Width = 75
-      Height = 21
-      ReadOnly = True
-      TabOrder = 5
-    end
-    object TxtNome: TEdit
-      Left = 172
-      Top = 8
-      Width = 595
-      Height = 21
-      MaxLength = 100
-      ReadOnly = True
       TabOrder = 6
     end
   end

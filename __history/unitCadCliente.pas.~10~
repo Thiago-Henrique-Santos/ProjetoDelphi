@@ -12,17 +12,17 @@ type
     PnlCabecalho: TPanel;
     Image1: TImage;
     Label1: TLabel;
+    Edit1: TEdit;
     Label2: TLabel;
+    Edit2: TEdit;
     PnlConteudo: TPanel;
     Label3: TLabel;
+    CbxTipoCadastro: TComboBox;
     Label4: TLabel;
+    TxmCPFCNPJ: TMaskEdit;
     BtnConfirmar: TBitBtn;
     BtnCancelar: TBitBtn;
     BtnLimparCampos: TBitBtn;
-    CbxTipoCadastro: TComboBox;
-    TxmCPFCNPJ: TMaskEdit;
-    TxtId: TEdit;
-    TxtNome: TEdit;
     procedure FormResize(Sender: TObject);
     procedure CbxTipoCadastroChange(Sender: TObject);
   private
@@ -37,8 +37,6 @@ var
 implementation
 
 {$R *.dfm}
-
-uses unitDM;
 
 procedure TFormCadCliente.CbxTipoCadastroChange(Sender: TObject);
 begin
