@@ -1,0 +1,39 @@
+unit unitCadCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TFormCadCliente = class(TForm)
+    PnlCabecalho: TPanel;
+    Image1: TImage;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    PnlConteudo: TPanel;
+    procedure FormResize(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCadCliente: TFormCadCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormCadCliente.FormResize(Sender: TObject);
+begin
+  PnlConteudo.Left := (FormCadCliente.Width - PnlConteudo.Width) div 2;
+  PnlConteudo.Top := PnlCabecalho.Height + 10;
+end;
+
+end.

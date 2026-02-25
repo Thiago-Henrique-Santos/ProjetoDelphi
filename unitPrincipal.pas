@@ -8,7 +8,7 @@ uses
   Vcl.Imaging.jpeg, Vcl.Menus;
 
 type
-  TformPrincipal = class(TForm)
+  TFormPrincipal = class(TForm)
     Panel1: TPanel;
     Image1: TImage;
     BitBtn1: TBitBtn;
@@ -37,7 +37,7 @@ type
   end;
 
 var
-  formPrincipal: TformPrincipal;
+  FormPrincipal: TFormPrincipal;
 
 implementation
 
@@ -45,17 +45,17 @@ implementation
 
 uses unitCentralClientes;
 
-procedure TformPrincipal.BitBtn1Click(Sender: TObject);
+procedure TFormPrincipal.BitBtn1Click(Sender: TObject);
 begin
-  formCentralClientes.ShowModal;
+  FormCentralClientes.ShowModal;
 end;
 
-procedure TformPrincipal.Clientes1Click(Sender: TObject);
+procedure TFormPrincipal.Clientes1Click(Sender: TObject);
 begin
-  formCentralClientes.ShowModal;
+  FormCentralClientes.ShowModal;
 end;
 
-procedure TformPrincipal.Sair1Click(Sender: TObject);
+procedure TFormPrincipal.Sair1Click(Sender: TObject);
 begin
   Application.Terminate;
 end;

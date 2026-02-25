@@ -8,14 +8,19 @@ uses
   Vcl.StdCtrls, Vcl.Buttons;
 
 type
-  TformCentralClientes = class(TForm)
+  TFormCentralClientes = class(TForm)
     PnlCabecalho: TPanel;
     Image1: TImage;
     LblTitulo: TLabel;
     PnlAcoes: TPanel;
     LtbClientes: TListBox;
     BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    Edit1: TEdit;
     procedure FormResize(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,13 +28,20 @@ type
   end;
 
 var
-  formCentralClientes: TformCentralClientes;
+  FormCentralClientes: TFormCentralClientes;
 
 implementation
 
 {$R *.dfm}
 
-procedure TformCentralClientes.FormResize(Sender: TObject);
+uses unitCadCliente;
+
+procedure TFormCentralClientes.BitBtn1Click(Sender: TObject);
+begin
+  FormCadCliente.ShowModal;
+end;
+
+procedure TFormCentralClientes.FormResize(Sender: TObject);
 begin
   LblTitulo.Left := (PnlCabecalho.Width - LblTitulo.Width) div 2;
   LblTitulo.Top := (PnlCabecalho.Height - LblTitulo.Height) div 2;
