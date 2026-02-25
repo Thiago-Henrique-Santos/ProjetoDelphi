@@ -1,0 +1,70 @@
+unit unitCadCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.Buttons;
+
+type
+  TFormCadCliente = class(TForm)
+    PnlCabecalho: TPanel;
+    Image1: TImage;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    PnlConteudo: TPanel;
+    Label3: TLabel;
+    CbxTipoCadastro: TComboBox;
+    Label4: TLabel;
+    TxmCPFCNPJ: TMaskEdit;
+    BtnConfirmar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    BtnLimparCampos: TBitBtn;
+    procedure FormResize(Sender: TObject);
+    procedure CbxTipoCadastroChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCadCliente: TFormCadCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormCadCliente.CbxTipoCadastroChange(Sender: TObject);
+begin
+  if CbxTipoCadastro.Text = 'Pessoa física' then
+  begin
+    TxmCPFCNPJ.ReadOnly := false;
+    TxmCPFCNPJ.EditMask := '000\.000\.000\-00;1;_';
+  end
+  else if CbxTipoCadastro.Text = 'Pessoa jurídica' then
+  begin
+    TxmCPFCNPJ.ReadOnly := false;
+    TxmCPFCNPJ.EditMask := '00\.000\.000\/0000\-00;1;_';
+  end
+  else
+  begin
+    TxmCPFCNPJ.ReadOnly := false;
+    TxmCPFCNPJ.EditMask := '';
+    TxmCPFCNPJ.Hint := 'CPF ou CNPJ';
+  end;
+
+end;
+
+procedure TFormCadCliente.FormResize(Sender: TObject);
+begin
+  PnlConteudo.Left := (FormCadCliente.ClientWidth - PnlConteudo.Width) div 2;
+  PnlConteudo.Top := PnlCabecalho.Height + 10;
+
+  BtnCancelar.Left := (Btn.Width - PnlConteudo.Width) div 2
+end;
+
+end.

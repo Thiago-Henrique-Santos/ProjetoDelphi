@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
-  Vcl.StdCtrls, Vcl.Mask;
+  Vcl.StdCtrls, Vcl.Mask, Vcl.Buttons;
 
 type
   TFormCadCliente = class(TForm)
@@ -20,6 +20,9 @@ type
     CbxTipoCadastro: TComboBox;
     Label4: TLabel;
     TxmCPFCNPJ: TMaskEdit;
+    BtnConfirmar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    BtnLimparCampos: TBitBtn;
     procedure FormResize(Sender: TObject);
     procedure CbxTipoCadastroChange(Sender: TObject);
   private
@@ -58,7 +61,7 @@ end;
 
 procedure TFormCadCliente.FormResize(Sender: TObject);
 begin
-  PnlConteudo.Left := (FormCadCliente.Width - PnlConteudo.Width) div 2;
+  PnlConteudo.Left := (FormCadCliente.ClientWidth - PnlConteudo.Width) div 2;
   PnlConteudo.Top := PnlCabecalho.Height + 10;
 end;
 
